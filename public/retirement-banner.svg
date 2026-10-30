@@ -1,0 +1,85 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F6F3EE"/>
+      <stop offset="1" stop-color="#EEE5DA"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#F7E8B2"/>
+      <stop offset="0.5" stop-color="#D9B76A"/>
+      <stop offset="1" stop-color="#F3D385"/>
+    </linearGradient>
+    <linearGradient id="red" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#8C1F2B"/>
+      <stop offset="1" stop-color="#4D0A14"/>
+    </linearGradient>
+    <linearGradient id="deepRed" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#4A0610"/>
+      <stop offset="1" stop-color="#2D0008"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <g opacity="0.3">
+    <path d="M0 140C120 110 200 80 350 120C500 160 650 180 820 115C990 50 1190 35 1600 120V0H0V140Z" fill="#5E1221"/>
+    <path d="M0 780C110 740 220 720 360 760C520 810 720 830 910 760C1080 700 1230 700 1600 790V900H0V780Z" fill="#5E1221"/>
+  </g>
+
+  <g opacity="0.9">
+    <path d="M80 135C185 70 245 42 350 60C450 76 500 108 570 115C540 153 463 182 350 205C250 225 170 198 80 135Z" fill="#C9A76D" opacity="0.35"/>
+    <path d="M1080 90C1170 46 1285 49 1420 92C1468 109 1510 130 1600 160V85C1530 52 1450 30 1370 24C1260 15 1168 41 1080 90Z" fill="#C9A76D" opacity="0.35"/>
+  </g>
+
+  <g transform="translate(150 180)">
+    <ellipse cx="250" cy="470" rx="170" ry="220" fill="#E9E6E1"/>
+    <path d="M110 560C130 390 170 300 250 260C330 300 380 390 395 560L380 630H130L110 560Z" fill="#F3F0ED"/>
+    <path d="M155 285C175 200 210 155 250 150C295 155 330 195 350 285L325 350H175L155 285Z" fill="#F3F0ED"/>
+    <circle cx="250" cy="230" r="90" fill="#F5E7D5"/>
+    <path d="M172 240C176 170 214 124 256 122C299 124 333 165 339 240C323 230 300 225 276 220C255 216 220 220 172 240Z" fill="#4A352D"/>
+    <path d="M201 292C224 306 246 314 273 315C301 313 328 303 350 286C333 370 319 430 256 474C192 431 183 370 201 292Z" fill="#F4F3F1"/>
+    <path d="M170 420L230 496H330L389 420L395 586H170L170 420Z" fill="#F8F7F5"/>
+    <path d="M188 430C220 450 245 460 249 460C255 460 278 452 310 430L322 488C277 516 210 516 188 430Z" fill="#3673B5"/>
+    <path d="M227 432L250 462L272 432L286 508H214L227 432Z" fill="#1F497B"/>
+    <rect x="170" y="525" width="166" height="26" rx="13" fill="#D7D7D7"/>
+    <circle cx="287" cy="595" r="20" fill="#D4D0CA"/>
+  </g>
+
+  <g transform="translate(820 170)">
+    <circle cx="250" cy="220" r="200" fill="#F6F3EE" stroke="#C89E57" stroke-width="8"/>
+    <circle cx="250" cy="220" r="160" fill="url(#red)"/>
+    <path d="M250 128C220 128 189 142 165 166C137 195 124 234 132 271C141 311 176 343 219 351C184 365 145 402 133 450C119 509 142 563 188 595C219 618 260 627 300 622C346 616 389 592 418 553C454 507 466 451 449 402C435 363 400 329 357 315C401 285 432 243 426 194C420 146 379 107 329 105C302 104 273 114 250 128Z" fill="#F8F1E8" opacity="0.15"/>
+    <g transform="translate(109 80)">
+      <circle cx="141" cy="140" r="46" fill="#F6F3EE"/>
+      <path d="M122 140C122 105 171 98 191 120C206 137 207 173 191 191C175 210 148 214 129 201C113 189 106 170 111 154C118 133 120 130 122 140ZM142 185C155 182 166 177 174 170C168 204 137 220 118 214C110 210 102 201 97 191C108 184 124 181 142 185Z" fill="#D71A2A"/>
+      <path d="M88 207C120 248 180 267 215 233C196 255 166 267 133 265C109 263 90 252 79 233C79 214 85 209 88 207Z" fill="#D71A2A"/>
+      <path d="M185 88C211 88 232 109 232 134C232 140 231 145 229 151C220 135 202 105 185 88Z" fill="#D71A2A"/>
+      <path d="M193 164C214 181 232 206 244 238C252 257 256 274 256 292C225 308 189 304 155 286C166 246 181 208 193 164Z" fill="#D71A2A"/>
+      <path d="M153 128C130 120 112 129 95 145C86 154 81 164 79 175C77 160 73 152 65 141C60 135 52 130 44 126C58 104 82 92 109 91C127 91 143 98 153 128Z" fill="#D71A2A"/>
+    </g>
+    <text x="250" y="402" text-anchor="middle" fill="#F7F2ED" font-size="32" font-family="Georgia, serif" font-weight="700" letter-spacing="2">KEMENTERIAN</text>
+    <text x="250" y="445" text-anchor="middle" fill="#F7F2ED" font-size="32" font-family="Georgia, serif" font-weight="700" letter-spacing="2">KESIHATAN MALAYSIA</text>
+  </g>
+
+  <g>
+    <text x="800" y="260" text-anchor="middle" fill="#2B1A18" font-size="68" font-family="Georgia, serif" font-weight="700" style="font-style: italic;">Selamat Bersara &amp; Jasamu Dikenang</text>
+    <text x="800" y="340" text-anchor="middle" fill="#45352F" font-size="30" font-family="Georgia, serif" font-style="italic">Setinggi-tinggi penghargaan kepada</text>
+
+    <g transform="translate(440 380)">
+      <rect x="0" y="0" width="720" height="80" rx="18" fill="url(#gold)" stroke="#B78E49" stroke-width="4"/>
+      <text x="360" y="53" text-anchor="middle" fill="#2A1E1C" font-size="42" font-family="Georgia, serif" font-weight="700" letter-spacing="2">EN. HENG CHIAN SHIEN</text>
+    </g>
+
+    <text x="800" y="550" text-anchor="middle" fill="#332C2B" font-size="34" font-family="Georgia, serif" font-weight="700">atas sumbangan dan jasa bakti sebagai</text>
+    <text x="800" y="610" text-anchor="middle" fill="#2D1C18" font-size="42" font-family="Georgia, serif" font-weight="700">PEGAWAI KESIHATAN PERSEKITARAN (PKP U10)</text>
+
+    <g transform="translate(600 650)">
+      <rect x="0" y="0" width="400" height="110" rx="18" fill="#F8F5F0" stroke="#D1B77A" stroke-width="4"/>
+      <circle cx="88" cy="54" r="35" fill="#0B5FB3"/>
+      <circle cx="88" cy="54" r="22" fill="#D93A2C"/>
+      <path d="M88 28V80M52 54H124" stroke="#F8F5F0" stroke-width="4" stroke-linecap="round"/>
+      <text x="170" y="52" fill="#0D2F86" font-size="34" font-family="Arial, sans-serif" font-weight="900">MALAYSIA</text>
+      <text x="170" y="88" fill="#0D2F86" font-size="34" font-family="Arial, sans-serif" font-weight="900">MADANI</text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,10 @@
+# Robots.txt for KMAM SPU
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.kmamspu.my/sitemap.xml
+
+# Disallow admin pages
+Disallow: /staff-login
+Disallow: /dashboard

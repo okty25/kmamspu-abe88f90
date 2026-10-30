@@ -1,0 +1,322 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 195 100% 95%;
+    --foreground: 195 100% 10%;
+    
+    --card: 0 0% 100%;
+    --card-foreground: 195 100% 10%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 195 100% 10%;
+    
+    --primary: 195 100% 40%;
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 195 30% 95%;
+    --secondary-foreground: 195 100% 10%;
+    
+    --muted: 195 30% 95%;
+    --muted-foreground: 195 40% 40%;
+    
+    --accent: 195 30% 95%;
+    --accent-foreground: 195 100% 10%;
+    
+    --destructive: 0 100% 40%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --border: 195 30% 90%;
+    --input: 195 30% 90%;
+    --ring: 195 100% 40%;
+    
+    --radius: 0.75rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-inter antialiased;
+  }
+
+  .glass {
+    @apply bg-white/10 backdrop-blur-md border border-white/20 rounded-xl shadow-lg;
+  }
+
+  .glass-hover {
+    @apply transition-all duration-300 hover:bg-white/20 hover:shadow-xl;
+  }
+
+  .nav-link {
+    @apply text-white/80 hover:text-white transition-all duration-300 relative;
+    @apply after:content-[''] after:absolute after:w-0 after:h-0.5 after:bottom-0 after:left-1/2 after:transition-all after:duration-300;
+    @apply hover:after:w-full hover:after:left-0;
+    text-shadow: 0 1px 3px rgb(0 0 0 / 0.35), 0 2px 6px rgb(0 0 0 / 0.25);
+  }
+
+  .navbar-text-shadow {
+    text-shadow:
+      0 1px 2px rgb(15 23 42 / 0.7),
+      0 2px 10px rgb(15 23 42 / 0.55),
+      0 0 14px rgb(255 255 255 / 0.18);
+  }
+  
+  .nav-link:hover::after {
+    background: linear-gradient(90deg, hsl(30 100% 60%), hsl(25 100% 55%));
+    box-shadow: 0 0 8px hsl(30 100% 60% / 0.8),
+                0 0 16px hsl(30 100% 60% / 0.6),
+                0 0 24px hsl(30 100% 60% / 0.4);
+    height: 2px;
+  }
+
+  .nav-button {
+    @apply bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 hover:border-white/30;
+    @apply shadow-lg hover:shadow-xl transition-all duration-300;
+    @apply hover:scale-105 active:scale-95;
+  }
+
+  .section-padding {
+    @apply py-16 px-4 md:px-8 lg:px-16;
+  }
+
+  .heading {
+    @apply text-3xl md:text-4xl font-bold mb-6 text-primary;
+  }
+
+  .subheading {
+    @apply text-lg md:text-xl text-muted-foreground mb-8;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Animated Waves */
+  .waves {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 200px;
+    background-color: hsl(195 100% 40%);
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
+    transition: 500ms;
+    z-index: 0;
+  }
+
+  .waves::before,
+  .waves::after {
+    content: '';
+    position: absolute;
+    width: 300vw;
+    height: 300vw;
+    top: -65vw;
+    left: 50%;
+    transform: translate(-50%, -75%);
+  }
+
+  .waves::before {
+    border-radius: 44%;
+    background: hsl(195 100% 95%);
+    animation: waves 8s linear infinite;
+  }
+
+  .waves::after {
+    border-radius: 44%;
+    background: hsl(195 100% 40% / 0.3);
+    animation: waves 15s linear infinite;
+  }
+
+  @keyframes waves {
+    0% {
+      transform: translate(-50%, -75%) rotate(0deg);
+    }
+    
+    100% {
+      transform: translate(-50%, -75%) rotate(360deg);
+    }
+  }
+
+  @keyframes zoom-pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.08); }
+  }
+
+
+  /* Flip Card Styles */
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+
+  .transform-style-3d {
+    transform-style: preserve-3d;
+  }
+
+  .backface-hidden {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+  }
+
+  .rotate-y-180 {
+    transform: rotateY(180deg);
+  }
+
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+
+  .flip-card-front {
+    z-index: 2;
+  }
+
+  .flip-card-back {
+    z-index: 1;
+  }
+}
+
+/* ===== Papan Pemuka Staf — Futuristic light-blue scheme ===== */
+.dash-future {
+  --background: 196 89% 82%;     /* #A8E4FA */
+  --foreground: 210 74% 17%;     /* #0B2A4A */
+  --card: 195 100% 96%;          /* #EDFBFF */
+  --card-foreground: 210 74% 17%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 210 74% 17%;
+  --primary: 200 100% 40%;       /* #0087CD */
+  --primary-foreground: 0 0% 100%;
+  --secondary: 196 70% 90%;
+  --secondary-foreground: 210 74% 17%;
+  --muted: 196 60% 88%;
+  --muted-foreground: 210 60% 35%;
+  --accent: 200 100% 45%;
+  --accent-foreground: 0 0% 100%;
+  --destructive: 3 100% 56%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 210 74% 17% / 0.12;
+  --input: 210 74% 17% / 0.12;
+  --ring: 200 100% 40%;
+
+  --safe: 190 100% 35%;
+  --warn: 32 100% 45%;
+  --alert: 355 80% 50%;
+
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+  /* Futuristic blueprint grid */
+  background-image:
+    radial-gradient(ellipse at 20% 0%, hsl(var(--primary) / 0.18) 0%, transparent 45%),
+    radial-gradient(ellipse at 80% 100%, hsl(var(--primary) / 0.14) 0%, transparent 40%),
+    linear-gradient(hsl(var(--foreground) / 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, hsl(var(--foreground) / 0.04) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 36px 36px, 36px 36px;
+}
+
+.dash-future::selection {
+  background: hsl(var(--primary) / 0.18);
+  color: hsl(var(--foreground));
+}
+
+.dash-future .glass-panel {
+  position: relative;
+  border-radius: 1.25rem;
+  background: linear-gradient(145deg, hsl(var(--card) / 0.86), hsl(var(--background) / 0.72));
+  border: 1px solid hsl(var(--primary) / 0.18);
+  box-shadow:
+    0 2px 4px hsl(var(--foreground) / 0.04),
+    0 8px 24px hsl(var(--foreground) / 0.08),
+    inset 0 1px 0 hsl(var(--primary) / 0.08);
+  transition: transform 220ms cubic-bezier(0.2, 0.8, 0.2, 1),
+              box-shadow 220ms ease,
+              border-color 220ms ease;
+  will-change: transform;
+  overflow: hidden;
+}
+
+.dash-future .glass-panel::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(
+    600px circle at var(--mx, 50%) var(--my, 0%),
+    hsl(var(--primary) / 0.12),
+    transparent 40%
+  );
+  opacity: 0;
+  transition: opacity 300ms ease;
+}
+
+.dash-future .glass-panel:hover::before {
+  opacity: 1;
+}
+
+.dash-future .glass-panel:hover {
+  transform: translateY(-3px);
+  border-color: hsl(var(--primary) / 0.35);
+  box-shadow:
+    0 4px 8px hsl(var(--foreground) / 0.05),
+    0 16px 40px hsl(var(--primary) / 0.14),
+    inset 0 1px 0 hsl(var(--primary) / 0.12);
+}
+
+.dash-future .neon-ring {
+  box-shadow:
+    0 1px 2px hsl(var(--foreground) / 0.04),
+    0 4px 12px hsl(var(--foreground) / 0.06),
+    inset 0 0 0 1px hsl(var(--primary) / 0.08);
+  animation: none;
+}
+
+@keyframes fluid-wave {
+  0% { transform: translateX(0) translateZ(0); }
+  100% { transform: translateX(-50%) translateZ(0); }
+}
+
+@keyframes radar-ping {
+  0% { transform: scale(0.4); opacity: 0.8; }
+  100% { transform: scale(2.6); opacity: 0; }
+}
+
+@keyframes ticker-up {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-50%); }
+}
+
+.dash-future .ticker-track { animation: ticker-up 26s linear infinite; }
+.dash-future .ticker-track:hover { animation-play-state: paused; }
+
+/* Apple-style labels */
+.dash-future .mono-label {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.dash-future .code-comment { color: hsl(var(--muted-foreground)); font-style: italic; }
+.dash-future .code-keyword { color: hsl(var(--primary)); }
+.dash-future .code-string { color: hsl(var(--safe)); }
+.dash-future .code-number { color: hsl(var(--warn)); }
+.dash-future .code-fn { color: hsl(var(--foreground)); }
+
+.dash-future .scanline::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(transparent 50%, hsl(var(--foreground) / 0.015) 50%);
+  background-size: 100% 4px;
+  border-radius: inherit;
+}
+

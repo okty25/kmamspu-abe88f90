@@ -1,0 +1,3 @@
+git rm src/assets/team/20250509_103753\ copy\ copy\ copy.jpg
+git commit -m "Delete image file"
+git push
