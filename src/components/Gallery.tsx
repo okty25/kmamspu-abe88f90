@@ -105,6 +105,33 @@ const posterInovasiPhotos = [
   caption: `Pertandingan Poster Inovasi Proses Dashboard - Foto ${index + 1}`,
 }));
 
+const projekDashboardPhotos = [
+  "IMG_20260930_151612.jpg",
+  "IMG_20260930_155958.jpg",
+  "IMG_20260930_160005.jpg",
+  "IMG_20260930_160659.jpg",
+  "IMG_20260930_160711.jpg",
+  "IMG_20260930_204404.jpg",
+].map((filename, index) => ({
+  src: `/poster-inovasi/${filename}`,
+  caption: `Projek Dashboard - Foto ${index + 1}`,
+}));
+
+const jasamuPuanRosmayatiPhotos = [
+  "IMG_20261009_092910.jpg",
+  "IMG_20261009_093000.jpg",
+  "IMG_20261009_093030.jpg",
+  "IMG_20261009_093524.jpg",
+  "IMG_20261009_093556.jpg",
+  "IMG_20261009_093605.jpg",
+  "IMG_20261009_093608.jpg",
+  "IMG_20261009_093621.jpg",
+  "IMG_20261009_093630.jpg",
+].map((filename, index) => ({
+  src: `/jasamu-puan-rosmayati/${filename}`,
+  caption: `Jasamu Dikenang Puan Rosmayati - Foto ${index + 1}`,
+}));
+
 const photos = [
   { src: g1, caption: "Pengukuran parameter kualiti air di lapangan" },
   { src: g2, caption: "Persampelan air bersama pasukan pemeriksaan" },
@@ -162,6 +189,93 @@ const Gallery = () => {
             <Images className="w-4 h-4" />
             Galeri Gambar
           </div>
+        </header>
+
+        <h3 className="text-center text-xl md:text-2xl font-bold text-balance mt-12 mb-6">
+          Jasamu Dikenang Puan Rosmayati
+        </h3>
+        <Swiper
+          modules={[Autoplay, EffectCoverflow, Navigation, Pagination]}
+          effect="coverflow"
+          grabCursor
+          centeredSlides
+          centeredSlidesBounds
+          centerInsufficientSlides
+          loop
+          slidesPerView="auto"
+          spaceBetween={24}
+          autoplay={{ delay: 2800, disableOnInteraction: false }}
+          navigation
+          pagination={{ clickable: true }}
+          coverflowEffect={{ rotate: 0, stretch: 0, depth: 160, modifier: 2, slideShadows: false }}
+          className="!pb-14 kmam-reel mx-auto"
+          style={{ display: 'flex', justifyContent: 'center' }}
+        >
+          {jasamuPuanRosmayatiPhotos.map((photo) => (
+            <SwiperSlide key={photo.src} className="!w-[280px] md:!w-[360px]">
+              <a
+                href={photo.src}
+                data-fancybox="jasamu-puan-rosmayati"
+                data-caption={photo.caption}
+                className="block group relative aspect-[4/3] overflow-hidden rounded-2xl glass"
+              >
+                <img
+                  src={photo.src}
+                  alt={photo.caption}
+                  loading="lazy"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <span className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-background/90 to-transparent p-3 text-[10px] md:text-xs font-medium text-foreground/90 leading-snug">
+                  {photo.caption}
+                </span>
+              </a>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+
+        <h3 className="text-center text-xl md:text-2xl font-bold text-balance mt-12 mb-6">
+          Projek Dashboard
+        </h3>
+        <Swiper
+          modules={[Autoplay, EffectCoverflow, Navigation, Pagination]}
+          effect="coverflow"
+          grabCursor
+          centeredSlides
+          centeredSlidesBounds
+          centerInsufficientSlides
+          loop
+          slidesPerView="auto"
+          spaceBetween={24}
+          autoplay={{ delay: 2800, disableOnInteraction: false }}
+          navigation
+          pagination={{ clickable: true }}
+          coverflowEffect={{ rotate: 0, stretch: 0, depth: 160, modifier: 2, slideShadows: false }}
+          className="!pb-14 kmam-reel mx-auto"
+          style={{ display: 'flex', justifyContent: 'center' }}
+        >
+          {projekDashboardPhotos.map((photo) => (
+            <SwiperSlide key={photo.src} className="!w-[280px] md:!w-[360px]">
+              <a
+                href={photo.src}
+                data-fancybox="projek-dashboard"
+                data-caption={photo.caption}
+                className="block group relative aspect-[4/3] overflow-hidden rounded-2xl glass"
+              >
+                <img
+                  src={photo.src}
+                  alt={photo.caption}
+                  loading="lazy"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <span className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-background/90 to-transparent p-3 text-[10px] md:text-xs font-medium text-foreground/90 leading-snug">
+                  {photo.caption}
+                </span>
+              </a>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+
+        <header className="text-center mb-12 max-w-3xl mx-auto">
           <h2 className="text-2xl md:text-4xl font-bold text-balance">
             Jasamu Dikenang Encik Heng Chian Shien
           </h2>
