@@ -112,6 +112,12 @@ const projekDashboardPhotos = [
   "IMG_20260930_160659.jpg",
   "IMG_20260930_160711.jpg",
   "IMG_20260930_204404.jpg",
+  "IMG_20260930_125808.jpg",
+  "IMG_20260930_151248.jpg",
+  "IMG_20260930_151334.jpg",
+  "IMG_20260930_151446.jpg",
+  "IMG_20260930_204517.jpg",
+  "IMG_20260930_225103.jpg",
 ].map((filename, index) => ({
   src: `/poster-inovasi/${filename}`,
   caption: `Projek Dashboard - Foto ${index + 1}`,
