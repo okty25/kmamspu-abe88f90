@@ -212,18 +212,18 @@ const Gallery = () => {
           style={{ display: 'flex', justifyContent: 'center' }}
         >
           {jasamuPuanRosmayatiPhotos.map((photo) => (
-            <SwiperSlide key={photo.src} className="!w-[280px] md:!w-[360px]">
+            <SwiperSlide key={photo.src} className="!w-[240px] md:!w-[280px]">
               <a
                 href={photo.src}
                 data-fancybox="jasamu-puan-rosmayati"
                 data-caption={photo.caption}
-                className="block group relative aspect-[4/3] overflow-hidden rounded-2xl glass"
+                className="block group relative aspect-[9/16] overflow-hidden rounded-2xl glass"
               >
                 <img
                   src={photo.src}
                   alt={photo.caption}
                   loading="lazy"
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
                 />
                 <span className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-background/90 to-transparent p-3 text-[10px] md:text-xs font-medium text-foreground/90 leading-snug">
                   {photo.caption}
@@ -254,18 +254,18 @@ const Gallery = () => {
           style={{ display: 'flex', justifyContent: 'center' }}
         >
           {projekDashboardPhotos.map((photo) => (
-            <SwiperSlide key={photo.src} className="!w-[280px] md:!w-[360px]">
+            <SwiperSlide key={photo.src} className="!w-[240px] md:!w-[280px]">
               <a
                 href={photo.src}
                 data-fancybox="projek-dashboard"
                 data-caption={photo.caption}
-                className="block group relative aspect-[4/3] overflow-hidden rounded-2xl glass"
+                className="block group relative aspect-[9/16] overflow-hidden rounded-2xl glass"
               >
                 <img
                   src={photo.src}
                   alt={photo.caption}
                   loading="lazy"
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
                 />
                 <span className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-background/90 to-transparent p-3 text-[10px] md:text-xs font-medium text-foreground/90 leading-snug">
                   {photo.caption}
@@ -345,18 +345,18 @@ const Gallery = () => {
           style={{ display: 'flex', justifyContent: 'center' }}
         >
           {posterInovasiPhotos.map((photo) => (
-            <SwiperSlide key={photo.src} className="!w-[280px] md:!w-[360px]">
+            <SwiperSlide key={photo.src} className="!w-[240px] md:!w-[280px]">
               <a
                 href={photo.src}
                 data-fancybox="poster-inovasi"
                 data-caption={photo.caption}
-                className="block group relative aspect-[4/3] overflow-hidden rounded-2xl glass"
+                className="block group relative aspect-[9/16] overflow-hidden rounded-2xl glass"
               >
                 <img
                   src={photo.src}
                   alt={photo.caption}
                   loading="lazy"
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
                 />
                 <span className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-background/90 to-transparent p-3 text-[10px] md:text-xs font-medium text-foreground/90 leading-snug">
                   {photo.caption}

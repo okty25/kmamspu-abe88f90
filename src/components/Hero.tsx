@@ -2,30 +2,8 @@
 import { Droplet } from "lucide-react";
 import kkmLogo from "@/assets/kkm-logo.png";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
-import { useState } from "react";
 
 const Hero = () => {
-  const [ripples, setRipples] = useState<Array<{ id: number; x: number; y: number }>>([]);
-
-  const handleLogoHover = (e: React.MouseEvent<HTMLDivElement>) => {
-    const rect = e.currentTarget.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-    
-    const newRipple = {
-      id: Date.now(),
-      x,
-      y
-    };
-    
-    setRipples(prev => [...prev, newRipple]);
-    
-    // Remove ripple after animation
-    setTimeout(() => {
-      setRipples(prev => prev.filter(ripple => ripple.id !== newRipple.id));
-    }, 600);
-  };
-
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-primary/20 to-background pt-16" aria-label="Bahagian Utama">
       <div className="absolute inset-0 overflow-hidden z-[1]" aria-hidden="true">
@@ -41,7 +19,6 @@ const Hero = () => {
               <DialogTrigger asChild>
                 <div
                   className="relative w-32 h-32 mb-4 cursor-pointer hover:scale-110 transition-transform duration-300 overflow-hidden rounded-full"
-                  onMouseMove={handleLogoHover}
                   role="button"
                   aria-label="Klik untuk tonton video KMAM SPU"
                 >
@@ -52,20 +29,6 @@ const Hero = () => {
                     width="128"
                     height="128"
                   />
-                  {ripples.map((ripple) => (
-                    <span
-                      key={ripple.id}
-                      className="absolute rounded-full bg-white/30 animate-ping"
-                      style={{
-                        left: ripple.x - 10,
-                        top: ripple.y - 10,
-                        width: '20px',
-                        height: '20px',
-                        animationDuration: '0.6s'
-                      }}
-                      aria-hidden="true"
-                    />
-                  ))}
                 </div>
               </DialogTrigger>
               <DialogContent className="max-w-4xl">
